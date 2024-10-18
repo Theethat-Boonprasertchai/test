@@ -1,23 +1,22 @@
 @import url(https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
 
-body, h2, p  {
+/* Base Styles */
+body, h2, p {
     font-family: "K2D", system-ui;
     margin: 0;
     padding: 0;
 }
 
 h2 {
-    color : #111c40;
+    color: #111c40;
 }
-
 
 body {
     line-height: 1.7;
     color: #333;
     background-color: #584f4f;
-    padding: 30px
+    padding: 30px;
 }
-
 
 header {
     background: #333;
@@ -25,148 +24,57 @@ header {
     padding: 10px;
     text-align: center;
     box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%);
-    font-size: 35px;    
+    font-size: 35px;
 }
 
-.intro {   
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%);    
-}
-
-
-.info {
-    font-family: "K2D", system-ui;
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;  
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
-    
-}
-
-.year{
-        color: #1f1266;
-        font-size: 55px;
-}
-
-.info2 {
-    font-family: "K2D", system-ui;
-    width: 900px; 
-    height: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
-    border-radius: 10px;   
-    margin: auto; 
-    margin-bottom: 20px; 
-    text-align: center;
-    }
-
-
- .info3 {
-    font-family: "K2D", system-ui;
-    width: 900px; 
-    height: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
-    border-radius: 10px;   
-    margin: auto; 
-    margin-bottom: 20px; 
-    font-size: 20px;
-    }
-    
-
-
-.media {
+.intro, .info, .media, .me, .sci {
     margin-bottom: 20px;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
-    width: 50%;
-    height: 30%;
+    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 
-
-.media video ,.media{
-    width: 50%;
-    margin-top: 20px;   
-    
-}
-
-.media 
-{
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
+.info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%);
+    max-width: 70%;
+    box-sizing: border-box;
     margin: auto;
 }
 
-
-.me {
-    width: 450px; 
-    height: 400px;
-    padding: 20px;
-    box-sizing: content-box;
-    background-color: #fff;
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
-    border-radius: 10px;   
-    margin: auto; 
-    margin-bottom: 20px; 
+.year {
+    color: #1f1266;
+    font-size: 55px;
 }
 
-.sci {
-    width: 600px; 
-    height: 425px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 8px 5px 15px 5px hsl(226, 58%, 16%); 
-    border-radius: 10px;   
-    margin: auto; 
-    margin-bottom: 20px; 
+.media video, .media {
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
-
-#scitu
-{
-    width: 500px;
-    height: 325px;
-    border: 2px solid #291200;
-    padding: 20px;
-}
-
-#pooad
-{
-    width: 300px;
-    height: 350px;
-    border: 2px solid #291200;
-    padding: 20px;
-}
-
-.boxpicture 
-{
+.boxpicture {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-    
 }
 
-
 .left-box, .right-box {
-    width: 45%; 
+    width: 45%;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 10px;
-    margin: auto;
+    margin-bottom: 20px;
     box-shadow: 8px 5px 15px 5px #111c40;
 }
 
@@ -193,22 +101,106 @@ header {
             width: 500px;  
             height: 500px;
         }
+    
+.img-resize1 img, .img-resize2 img, .img-resize3 img, .img-resize4 img {
+        width: 100%; /* ใช้เต็มความกว้างของกล่อง */
+        height: auto; /* ปรับขนาดตามอัตราส่วน */
+    }
 
-nav ul li a 
-{
+
+
+nav ul {
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 25px;
+}
+
+nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease;
     color: rgb(39, 35, 95);
 }
-        
-nav ul li a:hover 
-{
+
+nav ul li a:hover {
     color: #5c7ef0;
 }
 
-nav ul li 
-{
-    display: inline-block;
-    margin: 0 40px;
-    font-size: 35px;
+/* Responsive Styles for Mobile and Tablet */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        font-size: 25px;
+    }
+
+    .intro, .info, .media, .me, .sci {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .info
+    {
+        max-width: 100%;
+    }
+
+    .boxpicture {
+        flex-direction: column; /* Stack boxes vertically on mobile */
+        padding: 10px;
+    }
+
+   
+
+    nav ul li {
+        display: block; /* Vertical navigation for mobile */
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    #pooad {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-resize1 img, .img-resize2 img, .img-resize3 img, .img-resize4 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .boxpicture {
+        flex-direction: column; /* Stack boxes vertically on mobile */
+        padding: 10px;
+    }
+
+    .left-box, .right-box {
+        width: 100%; /* Full width on mobile */
+        margin: 0 0 10px 0;
+    }
+}
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .boxpicture {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-box, .right-box {
+        width: 48%;
+    }
+
+    nav ul li {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    header {
+        font-size: 30px;
+    }
+    
 }
